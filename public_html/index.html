@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/title.js"></script>
+        <script src="js/search.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/meadia-queries.css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--[if lt IE 9]>
+                <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div id="pagewrap">
+
+            <header id="header">
+
+                <hgroup>
+                    <h1 id="site-logo">Arduino Playground</h1>
+                    <h2 id="site-description">All your DIY Electronics from one place..</h2>
+                </hgroup>
+
+                <nav>
+                    <ul id="main-nav" class="nav">
+                        <li>
+                            <a href="#">2012CS006</a>
+                            <audio id="beep-two" controls preload="auto">
+                                <source src="audio/beep.mp3" controls></source>
+                                <source src="audio/beep.ogg" controls></source>
+                                Your browser isn't invited for super fun time.
+                            </audio>
+                        </li>
+                        <li><a href="#">2012CS149</a></li>
+                        <li><a href="#">2012CS152</a></li>
+                        <li><a href="#">2012CS153</a></li>
+                        <li><a href="#">2012CS154</a></li>
+                    </ul>
+                    <script>
+                        $("#main-nav a")
+                                .each(function (i) {
+                                    if (i != 0) {
+                                        $("#beep-two")
+                                                .clone()
+                                                .attr("id", "beep-two" + i)
+                                                .appendTo($(this).parent());
+                                    }
+                                    $(this).data("beeper", i);
+                                })
+                                .mouseenter(function () {
+                                    $("#beep-two" + $(this).data("beeper"))[0].play();
+                                });
+                        $("#beep-two").attr("id", "beep-two0");
+                    </script>
+                </nav>
+
+                <form action="http://www.google.com/search" method="get" onSubmit="Gsitesearch(this)" id="searchform">
+                    <input name="q" type="hidden" />
+                    <input name="qfront" type="search" style="width: 180px" /> <input type="submit" value="Search" />
+                </form>
+
+            </header>
+
+            <div id="content">
+
+                <article class="post">
+                    <h1>What is Arduino?</h1>
+                    <p>Arduino is a tool for making computers that can sense and control more of the physical world than your desktop computer. It's an open-source physical computing platform based on a simple microcontroller board, and a development environment for writing software for the board.
+
+                        Arduino can be used to develop interactive objects, taking inputs from a variety of switches or sensors, and controlling a variety of lights, motors, and other physical outputs. Arduino projects can be stand-alone, or they can communicate with software running on your computer (e.g. Flash, Processing, MaxMSP.) The boards can be assembled by hand or purchased preassembled; the open-source IDE can be downloaded for free.
+
+                        The Arduino programming language is an implementation of Wiring, a similar physical computing platform, which is based on the Processing multimedia programming environment.</p>
+                </article>
+                <article class="post">
+                    <h1>Why Arduino?</h1>
+                    <p>There are many other microcontrollers and microcontroller platforms available for physical computing. Parallax Basic Stamp, Netmedia's BX-24, Phidgets, MIT's Handyboard, and many others offer similar functionality. All of these tools take the messy details of microcontroller programming and wrap it up in an easy-to-use package. Arduino also simplifies the process of working with microcontrollers, but it offers some advantage for teachers, students, and interested amateurs over other systems:
+
+                    <li>Inexpensive - Arduino boards are relatively inexpensive compared to other microcontroller platforms. The least expensive version of the Arduino module can be assembled by hand, and even the pre-assembled Arduino modules cost less than $50</li>
+                    <li>Cross-platform - The Arduino software runs on Windows, Macintosh OSX, and Linux operating systems. Most microcontroller systems are limited to Windows.</li>
+                    <li>Simple, clear programming environment - The Arduino programming environment is easy-to-use for beginners, yet flexible enough for advanced users to take advantage of as well. For teachers, it's conveniently based on the Processing programming environment, so students learning to program in that environment will be familiar with the look and feel of Arduino</li>
+                    <li>Open source and extensible software- The Arduino software is published as open source tools, available for extension by experienced programmers. The language can be expanded through C++ libraries, and people wanting to understand the technical details can make the leap from Arduino to the AVR C programming language on which it's based. Similarly, you can add AVR-C code directly into your Arduino programs if you want to.</li>
+                    <li>Open source and extensible hardware - The Arduino is based on Atmel's ATMEGA8 and ATMEGA168 microcontrollers. The plans for the modules are published under a Creative Commons license, so experienced circuit designers can make their own version of the module, extending it and improving it. Even relatively inexperienced users can build the breadboard version of the module in order to understand how it works and save money.</li></p>
+                </article>
+
+            </div>
+
+            <aside id="sidebar">
+
+                <section class="side-bar">
+                    <h1>Arduino Boards</h1>
+                    <img src="images/arduino-board.jpg">
+                    <table>
+                        <tr><td>Arduino Uno</td></tr>
+                        <tr><td>Arduino Leonardo</td></tr>
+                        <tr><td>Arduino Due</td></tr>
+                        <tr><td>Arduino Yun</td></tr>
+                    </table>
+                </section>
+                
+                <section class="side-bar">
+                    <h1>Arduino Shields</h1>
+                    <img src="images/arduino-shield.jpg">
+                </section>
+
+            </aside>
+
+            <footer id="footer">
+                footer
+            </footer>
+
+        </div>
+
+
+
+    </body>
+</html>

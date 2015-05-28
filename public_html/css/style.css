@@ -1,0 +1,138 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+
+#pagewrap {
+    width: 980px;
+    margin: 0 auto;
+    background-color: lightblue;
+}
+
+#header {
+    height: 160px;
+}
+#site-logo{
+    text-align: center;
+    color: darkcyan;
+    font-size: 65px;
+    background: #6699ff;
+    margin-bottom: 2px;
+}
+#site-description{
+    text-align: center;
+    color: #6699ff;
+    background: darkcyan;
+    margin-top: 2px;
+}
+
+#main-nav{
+    background-color: blue;
+    padding: 2px;
+    margin: 0 0;
+    border-radius: 10px;
+    list-style: none;
+    margin-left: 7%;
+    padding: 0;
+}
+#main-nav li a{
+    color: azure;
+    background-color: cornflowerblue;
+    display: block;
+    float: left;
+    padding: 15px;
+    margin: 2px;
+    text-decoration: none;
+    border: 1px darkblue solid;
+    border-radius: 5px;   
+}
+#main-nav a:hover, #main-nav li.active a{
+    background-color: azure;
+    color: cornflowerblue;
+    border-radius: 5px;
+}
+
+.nav audio{
+    display: none;
+}
+
+#searchform{
+    float: right;
+    padding-right: 5px;
+}
+
+
+#content {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 2px;
+    width: 600px;
+    float: left;
+    text-align: justify;
+}
+
+.post{
+    border: 1px darkblue solid;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+#sidebar {
+    width: 280px;
+    float: right;
+    margin-right: 10px;
+}
+
+.side-bar{
+    border: 1px darkblue solid;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+#footer {
+    clear: both;
+    float: bottom;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+/*for 980px or less*/
+/*@media screen and(max-width: 980px){
+    #pagewrap{
+        width: 94%;
+    }
+    #content{
+        width: 65%;
+    }
+    #sidebar{
+        width: 30%;
+    }
+}
+*/
+/*for 700px or less*/
+/*@media screen and(max-width: 700px){
+    #content{
+        width: auto;
+        float: none;
+    }
+    #sidebar{
+        width: auto;
+        float: none;
+    }
+}
+*/
+/*for 480px or less*/
+/*@media screen and(max-width: 480px){
+    #header{
+        height: auto;
+    }
+    h1{
+        font-size: 24px;
+    }
+    #sidebar{
+        display: none;
+    }
+}*/
