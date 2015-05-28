@@ -2,6 +2,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
+body{
+    background-image: url("../images/pcb.jpg");
+    //opacity: 65%;
+}
+
 #pagewrap {
     width: 980px;
     margin: 0 auto;
@@ -91,6 +96,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #footer {
     clear: both;
     float: bottom;
+}
+#footer h1, h2, h3{
+    text-align: center;
 }
 
 img {
