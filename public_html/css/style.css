@@ -89,6 +89,7 @@ body{
 
 .side-bar{
     border: 1px darkblue solid;
+    margin-left: 10px;
     margin-bottom: 5px;
     padding: 5px;
 }
