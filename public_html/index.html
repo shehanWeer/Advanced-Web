@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="js/title.js"></script>
-        <script src="js/search.js"></script>
+        <script type="text/javascript" src="js/title.js"></script>
+        <script type="text/javascript" src="js/search.js"></script>
+        <script type="text/javascript" src="js/localStorage.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
         <link rel="shortcut icon" href="images/favicon.ico">
         <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -13,7 +14,7 @@
                 <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body onload="javascript: storeChoice();">
 
         <div id="pagewrap">
 
@@ -86,16 +87,16 @@
                 </article>
                 <article class="post">
                     <h1>What is your favorite Arduino board?</h1>
-                    <form>
+                    <form id="my-choice">
                         <table>
                             <tr>
                                 <td>Your Name:</td>
-                                <td><input name="name" type="text"></td>
+                                <td><input name="name" type="text" placeholder="Enter your name" id="name"></td>
                             </tr>
                             <tr>
                                 <td>Your favorite board:</td>
                                 <td>
-                                    <select>
+                                    <select id="board">
                                         <option value="Arduino Uno">Arduino Uno</option>
                                         <option value="Arduino Leonardo">Arduino Leonardo</option>
                                         <option value="Arduino Due">Arduino Due</option>
@@ -118,6 +119,16 @@
                                         <option value="Arduino Fio">Arduino Fio</option>
                                         <option value="Arduino Pro">Arduino Pro</option>
                                     </select>
+                                </td>
+                                <td><input type="button" value="Remember My Choice" onclick="javascript: setName(), setBoard();"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input id="my-name" value="" disabled="" placeholder="Pick your name">
+                                    <label id="likes"> likes </label>
+                                </td>
+                                <td>
+                                    <input id="my-board" value="" disabled="" placeholder="pick your borad">
                                 </td>
                             </tr>
                         </table>
@@ -153,8 +164,5 @@
             </footer>
 
         </div>
-
-
-
     </body>
 </html>
