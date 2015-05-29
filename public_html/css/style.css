@@ -108,6 +108,11 @@ img {
     width: auto\9; /* ie8 */
 }
 
+video{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
 /*for 980px or less*/
 /*@media screen and(max-width: 980px){
     #pagewrap{
