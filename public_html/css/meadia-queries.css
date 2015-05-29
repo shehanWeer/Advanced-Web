@@ -7,7 +7,7 @@
         padding: 3% 4%;
     }
     #sidebar {
-        width: 30%;
+        width: auto;
     }
     #sidebar .widget {
         padding: 8% 7%;
@@ -41,9 +41,9 @@
         margin: 20px 0;
     }
     #sidebar {
-        width: 100%;
-        float: none;
-        margin: 0;
+        //width: 100%;
+        //float: none;
+        //margin: 0;
     }
 }
 
@@ -56,13 +56,16 @@
         padding: 10px 8px;
         float: none;
     }
-    
+
     #searchform{
         position: inherit;
         float: none;
     }
-    
+
     #site-logo{
-       font-size: 36px;
+        font-size: 36px;
+    }
+    form input{
+        
     }
 }
