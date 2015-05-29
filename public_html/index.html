@@ -90,11 +90,15 @@
                     <form id="my-choice">
                         <table>
                             <tr>
-                                <td>Your Name:</td>
+                                <td><label>Your Name:</label></td>
+                            </tr>
+                            <tr>
                                 <td><input name="name" type="text" placeholder="Enter your name" id="name"></td>
                             </tr>
                             <tr>
-                                <td>Your favorite board:</td>
+                                <td><label>Your favorite board:</label></td>
+                            </tr>
+                            <tr>
                                 <td>
                                     <select id="board">
                                         <option value="Arduino Uno">Arduino Uno</option>
@@ -120,6 +124,8 @@
                                         <option value="Arduino Pro">Arduino Pro</option>
                                     </select>
                                 </td>
+                            </tr>
+                            <tr>
                                 <td><input type="button" value="Remember My Choice" onclick="javascript: setName(), setBoard();"></td>
                             </tr>
                             <tr>
@@ -127,6 +133,8 @@
                                     <input id="my-name" value="" disabled="" placeholder="Pick your name">
                                     <label id="likes"> likes </label>
                                 </td>
+                            </tr>
+                            <tr>
                                 <td>
                                     <input id="my-board" value="" disabled="" placeholder="pick your borad">
                                 </td>
